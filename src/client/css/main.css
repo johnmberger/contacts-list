@@ -6,3 +6,21 @@ body {
 a {
   color: #00B7FF;
 }
+
+table, th, td {
+  padding: 2px 10px;
+  border: 1px solid black;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+table {
+  width: 50%;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
+}

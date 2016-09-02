@@ -1,3 +1,3 @@
 # Contacts List
 
-This full-stack app pulls a contact list from a SQL database and serves it up as a table in the browser.
+This little app grabs data from an object and renders the object dynamically within the browser.
