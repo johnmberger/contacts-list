@@ -18,9 +18,13 @@ th {
 }
 
 table {
-  width: 50%;
+  width: 100%;
 }
 
 tr:nth-child(even) {
   background-color: lightgrey;
+}
+
+a input {
+  color: white;
 }

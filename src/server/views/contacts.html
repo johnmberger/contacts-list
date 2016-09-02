@@ -5,37 +5,69 @@
 {% block content %}
 
   <div class="container">
-    <h1>{{title}}</h1>
-    <table>
-      <th>
-        First Name
-      </th>
-      <th>
-        Last Name
-      </th>
-      <th>
-        Phone
-      </th>
-      <th>
-        Date of Birth
-      </th>
-      {% for item in data %}
-      <tr>
-        <td>
-          <a href="#">{{item.first_name}}</a>
-        </td>
-        <td>
-          {{item.last_name}}
-        </td>
-        <td>
-          {{item.telephone_number}}
-        </td>
-        <td>
-          {{item.dob}}
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
+    <div class="col-md-6">
+      <h1>{{title}}</h1>
+      <br>
+      <br>
+      <table>
+        <th>
+          First Name
+        </th>
+        <th>
+          Last Name
+        </th>
+        <th>
+          Phone
+        </th>
+        <th>
+          Date of Birth
+        </th>
+        {% for item in data %}
+        <tr>
+          <td>
+            {{item.first_name}}
+          </td>
+          <td>
+            {{item.last_name}}
+          </td>
+          <td>
+            {{item.telephone_number}}
+          </td>
+          <td>
+            {{item.dob}}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h1>Search</h1>
+      <br>
+      <form method="get">
+        <label for="first_name">Search by First Name</label>
+        <input type="text" name="first_name" id="first_name" class="form-control">
+        <br>
+        <input type="submit" class="btn btn-primary">
+        <a href="http://localhost:3000/contacts"><input type="button" class="btn btn-secondary" value="Reset"></a>
+      </form>
+      <hr>
+      <h1>Add a Contact</h1>
+      <br>
+      <form method="post" action="http://localhost:3000/contacts">
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name" class="form-control" required>
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name" class="form-control" required>
+        <label for="dob">Date of Birth (YYYY-MM-DD)</label>
+        <input type="text" name="dob" id="dob" class="form-control" required>
+        <label for="eye_color">Eye color</label>
+        <input type="text" name="eye_color" id="eye_color" class="form-control" required>
+        <label for="telephone_number">Phone Number</label>
+        <input type="text" name="telephone_number" class="form-control" required>
+        <br>
+        <input type="submit" class="btn btn-primary">
+      </form>
+    </div>
   </div>
 
 {% endblock %}
